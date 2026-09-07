@@ -1,4 +1,4 @@
-Graphene Extension Mod v1.0.0 for minecraft 1.20.1
+Graphene Extension Mod for minecraft 1.20.1
 Welcome to Graphene Extension, a Minecraft mod that introduces graphene, a new and versatile material, to your game. This mod expands your crafting possibilities and provides exciting new tools and armors to enhance your Minecraft experience.
          
 Download the Mod: https://www.curseforge.com/minecraft/mc-mods/graphene-extension
