@@ -17,7 +17,8 @@ import java.util.List;
 import java.util.function.Consumer;
 
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
-        private static final List<ItemLike> GRAPHENE_ORES = List.of(
+        private static final List<ItemLike> GRAPHENE_SMELTABLES = List.of(
+                        ModItems.RAW_GRAPHENE.get(),
                         ModBlocks.GRAPHENE_ORE.get(),
                         ModBlocks.NETHER_GRAPHENE_ORE.get(),
                         ModBlocks.DEEPSLATE_GRAPHENE_ORE.get(),
@@ -29,9 +30,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         @Override
         protected void buildRecipes(Consumer<FinishedRecipe> pWriter) {
-                oreBlasting(pWriter, GRAPHENE_ORES, RecipeCategory.MISC, ModItems.GRAPHENE_DUST.get(), 0.5f, 100,
+                oreBlasting(pWriter, GRAPHENE_SMELTABLES, RecipeCategory.MISC, ModItems.GRAPHENE_DUST.get(), 0.5f, 100,
                                 "graphene_dust");
-                oreSmelting(pWriter, GRAPHENE_ORES, RecipeCategory.MISC, ModItems.GRAPHENE_DUST.get(), 0.4f, 200,
+                oreSmelting(pWriter, GRAPHENE_SMELTABLES, RecipeCategory.MISC, ModItems.GRAPHENE_DUST.get(), 0.4f, 200,
                                 "graphene_dust");
 
                 // 8 Pós de Grafeno em moldura -> 1 Grafeno

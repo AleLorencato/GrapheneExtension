@@ -4,6 +4,7 @@ import net.ale.grapheneextension.GrapheneExtension;
 import net.ale.grapheneextension.block.ModBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.BlockTagsProvider;
@@ -37,10 +38,17 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(Tags.Blocks.NEEDS_NETHERITE_TOOL)
                 .add(ModBlocks.END_STONE_GRAPHENE_ORE.get());
 
-/*
-        this.tag(ModTags.Blocks.NEEDS_GRAPHENE_TOOL)
-                .add(ModBlocks.END_STONE_GRAPHENE_ORE.get());
-*/
+        this.tag(Tags.Blocks.ORES)
+                .add(ModBlocks.GRAPHENE_ORE.get(),
+                        ModBlocks.DEEPSLATE_GRAPHENE_ORE.get(),
+                        ModBlocks.NETHER_GRAPHENE_ORE.get(),
+                        ModBlocks.END_STONE_GRAPHENE_ORE.get());
+
+        this.tag(BlockTags.create(new ResourceLocation("forge", "ores/graphene")))
+                .add(ModBlocks.GRAPHENE_ORE.get(),
+                        ModBlocks.DEEPSLATE_GRAPHENE_ORE.get(),
+                        ModBlocks.NETHER_GRAPHENE_ORE.get(),
+                        ModBlocks.END_STONE_GRAPHENE_ORE.get());
 
     }
 

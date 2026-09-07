@@ -38,7 +38,7 @@
                   "function": "minecraft:explosion_decay"
                 }
               ],
-              "name": "grapheneextension:graphene_dust"
+              "name": "grapheneextension:raw_graphene"
             }
           ]
         }

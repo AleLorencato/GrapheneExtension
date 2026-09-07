@@ -17,8 +17,9 @@ public class ModCreativeModTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.GRAPHENE.get()))
                     .title(Component.translatable("creativetab.firstmod_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
-                        output.accept(ModItems.GRAPHENE.get());
+                        output.accept(ModItems.RAW_GRAPHENE.get());
                         output.accept(ModItems.GRAPHENE_DUST.get());
+                        output.accept(ModItems.GRAPHENE.get());
                         output.accept(ModBlocks.GRAPHENE_BLOCK.get());
                         output.accept(ModBlocks.GRAPHENE_ORE.get());
                         output.accept(ModBlocks.NETHER_GRAPHENE_ORE.get());

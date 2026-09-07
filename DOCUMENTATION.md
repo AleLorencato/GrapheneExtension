@@ -2,7 +2,7 @@
 
 ## 1. Visão Geral do Projeto
 - **Nome:** Graphene Extension (`grapheneextension`)
-- **Versão:** `1.20.1-0.1.0` (Padrão CurseForge: `[Versão MC]-[Versão Mod]`)
+- **Versão:** `1.20.1-0.2.0` (Padrão CurseForge: `[Versão MC]-[Versão Mod]`)
 - **Plataforma:** Minecraft `1.20.1`, Minecraft Forge `47.2.30`
 - **Mapeamentos:** Parchment `2023.09.03-1.20.1` (Java 17)
 - **Pacote Principal:** `net.ale.grapheneextension`
@@ -13,7 +13,8 @@
 
 ### 2.1. Itens e Materiais
 - `graphene` (Grafeno): Material principal utilizado na confecção de blocos compactados, armaduras e ferramentas.
-- `graphene_dust` (Pó de Grafeno): Drop primário obtido na mineração dos minérios de grafeno.
+- `raw_graphene` (Grafeno Bruto): Minério cru dropado ao minerar os blocos de minério de grafeno nas dimensões.
+- `graphene_dust` (Pó de Grafeno): Pó obtido ao assar o grafeno bruto na fornalha (1:1) ou processá-lo em pulverizadores industriais (1:2).
 
 ### 2.2. Ferramentas (Tier de Grafeno)
 - **Tier:** Nível `5` (registrado após o Netherite via `TierSortingRegistry`).
@@ -62,15 +63,15 @@
 - [x] Adicionar receita na bancada de trabalho: **8 Pós de Grafeno $\rightarrow$ 1 Grafeno** (`graphene`).
 - [x] Executar `./gradlew runData` para atualizar os arquivos gerados.
 
-### 📌 Tarefa 2: Futura (Versão 1.0 Oficial)
-- [ ] Adicionar o item Minério de Grafeno Bruto (`raw_graphene`).
-- [ ] Atualizar loot tables dos blocos de minério para droparem `raw_graphene` (suportando Fortune e Silk Touch).
-- [ ] Criar mecânica de processamento no Minecraft Vanilla:
-  - 1 `raw_graphene` $\rightarrow$ 1 `graphene_dust`.
-- [ ] Adicionar suporte a mods tecnológicos via datapack / tags universais:
+### 📌 Tarefa 2: Versão 1.0 (Concluída ✅)
+- [x] Adicionar o item Minério de Grafeno Bruto (`raw_graphene`).
+- [x] Atualizar loot tables dos blocos de minério para droparem `raw_graphene` (suportando Fortune e Silk Touch).
+- [x] Criar mecânica de processamento no Minecraft Vanilla:
+  - 1 `raw_graphene` $\rightarrow$ 1 `graphene_dust` (Fornalha e Alto-Forno).
+- [x] Adicionar suporte a mods tecnológicos via datapack / tags universais:
   - **Thermal Expansion (Pulverizer):** 1 minério bruto $\rightarrow$ 2 pós de grafeno.
   - **Mekanism (Crusher / Enrichment):** 1 minério bruto $\rightarrow$ 2 pós de grafeno.
-  - **Industrial Craft / Outros:** compatibilidade com tags `forge:ores`, `forge:raw_materials`, `forge:dusts`.
+  - Compatibilidade com tags `forge:ores`, `forge:raw_materials`, `forge:dusts`, `forge:ingots`.
 
 ### 📌 Tarefa 3: Avançada (Major Release Futura — Super Grafeno)
 - [ ] Criar novo tier de material: "Super Grafeno".

@@ -13,6 +13,8 @@ public class ModItems {
 
     public static final RegistryObject<Item> GRAPHENE = ITEMS.register("graphene", () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> RAW_GRAPHENE = ITEMS.register("raw_graphene", () -> new Item(new Item.Properties()));
+
     public static final RegistryObject<Item> GRAPHENE_DUST = ITEMS.register("graphene_dust", () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> GRAPHENE_SWORD = ITEMS.register("graphene_sword",

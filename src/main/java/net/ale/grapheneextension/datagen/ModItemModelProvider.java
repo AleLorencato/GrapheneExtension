@@ -40,6 +40,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
+        simpleItem(ModItems.RAW_GRAPHENE);
         simpleItem(ModItems.GRAPHENE);
         simpleItem(ModItems.GRAPHENE_DUST);
 

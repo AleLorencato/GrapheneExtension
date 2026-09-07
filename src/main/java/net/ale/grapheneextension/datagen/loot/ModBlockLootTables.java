@@ -28,17 +28,17 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 this.dropSelf(ModBlocks.GRAPHENE_BLOCK.get());
 
                 this.add(ModBlocks.GRAPHENE_ORE.get(),
-                                block -> createOreDrop(ModBlocks.GRAPHENE_ORE.get(), ModItems.GRAPHENE_DUST.get()));
+                                block -> createOreDrop(ModBlocks.GRAPHENE_ORE.get(), ModItems.RAW_GRAPHENE.get()));
                 this.add(ModBlocks.DEEPSLATE_GRAPHENE_ORE.get(),
                                 block -> createDeepslateDrop(ModBlocks.DEEPSLATE_GRAPHENE_ORE.get(),
-                                                ModItems.GRAPHENE_DUST.get()));
+                                                ModItems.RAW_GRAPHENE.get()));
                 this.add(ModBlocks.NETHER_GRAPHENE_ORE.get(),
                                 block -> createNetherDrop(ModBlocks.NETHER_GRAPHENE_ORE.get(),
-                                                ModItems.GRAPHENE_DUST.get()));
+                                                ModItems.RAW_GRAPHENE.get()));
 
                 this.add(ModBlocks.END_STONE_GRAPHENE_ORE.get(),
                                 block -> createEndDrop(ModBlocks.END_STONE_GRAPHENE_ORE.get(),
-                                                ModItems.GRAPHENE_DUST.get()));
+                                                ModItems.RAW_GRAPHENE.get()));
         }
 
         protected LootTable.Builder createDeepslateDrop(Block pBlock, Item item) {
