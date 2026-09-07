@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "grapheneextension:graphene_from_smelting_end_stone_graphene_ore"
+        "recipe": "grapheneextension:graphene_dust_from_blasting_end_stone_graphene_ore"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "grapheneextension:graphene_from_smelting_end_stone_graphene_ore"
+      "grapheneextension:graphene_dust_from_blasting_end_stone_graphene_ore"
     ]
   },
   "sends_telemetry_event": false

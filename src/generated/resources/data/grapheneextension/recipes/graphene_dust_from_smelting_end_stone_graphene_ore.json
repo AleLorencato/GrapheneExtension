@@ -3,9 +3,9 @@
   "category": "misc",
   "cookingtime": 200,
   "experience": 0.4,
-  "group": "graphene",
+  "group": "graphene_dust",
   "ingredient": {
     "item": "grapheneextension:end_stone_graphene_ore"
   },
-  "result": "grapheneextension:graphene"
+  "result": "grapheneextension:graphene_dust"
 }

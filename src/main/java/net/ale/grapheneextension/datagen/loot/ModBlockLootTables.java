@@ -19,56 +19,57 @@ import java.util.Set;
 
 public class ModBlockLootTables extends BlockLootSubProvider {
 
-    public ModBlockLootTables() {
-        super(Set.of(), FeatureFlags.REGISTRY.allFlags());
-    }
+        public ModBlockLootTables() {
+                super(Set.of(), FeatureFlags.REGISTRY.allFlags());
+        }
 
-    @Override
-    protected void generate() {
-        this.dropSelf(ModBlocks.GRAPHENE_BLOCK.get());
+        @Override
+        protected void generate() {
+                this.dropSelf(ModBlocks.GRAPHENE_BLOCK.get());
 
+                this.add(ModBlocks.GRAPHENE_ORE.get(),
+                                block -> createOreDrop(ModBlocks.GRAPHENE_ORE.get(), ModItems.GRAPHENE_DUST.get()));
+                this.add(ModBlocks.DEEPSLATE_GRAPHENE_ORE.get(),
+                                block -> createDeepslateDrop(ModBlocks.DEEPSLATE_GRAPHENE_ORE.get(),
+                                                ModItems.GRAPHENE_DUST.get()));
+                this.add(ModBlocks.NETHER_GRAPHENE_ORE.get(),
+                                block -> createNetherDrop(ModBlocks.NETHER_GRAPHENE_ORE.get(),
+                                                ModItems.GRAPHENE_DUST.get()));
 
-        this.add(ModBlocks.GRAPHENE_ORE.get(),
-                block -> createOreDrop(ModBlocks.GRAPHENE_ORE.get(), ModItems.GRAPHENE_DUST.get())
-        );
-        this.add(ModBlocks.DEEPSLATE_GRAPHENE_ORE.get(),
-                block -> createDeepslateDrop(ModBlocks.DEEPSLATE_GRAPHENE_ORE.get(), ModItems.GRAPHENE_DUST.get())
-        );
-        this.add(ModBlocks.NETHER_GRAPHENE_ORE.get(),
-                block -> createNetherDrop(ModBlocks.NETHER_GRAPHENE_ORE.get(), ModItems.GRAPHENE_DUST.get())
-        );
+                this.add(ModBlocks.END_STONE_GRAPHENE_ORE.get(),
+                                block -> createEndDrop(ModBlocks.END_STONE_GRAPHENE_ORE.get(),
+                                                ModItems.GRAPHENE_DUST.get()));
+        }
 
-        this.add(ModBlocks.END_STONE_GRAPHENE_ORE.get(),
-                block -> createEndDrop(ModBlocks.END_STONE_GRAPHENE_ORE.get(), ModItems.GRAPHENE_DUST.get())
-        );
-    }
+        protected LootTable.Builder createDeepslateDrop(Block pBlock, Item item) {
+                return createSilkTouchDispatchTable(pBlock, (LootPoolEntryContainer.Builder) this.applyExplosionDecay(
+                                pBlock,
+                                LootItem.lootTableItem(item)
+                                                .apply(SetItemCountFunction
+                                                                .setCount(UniformGenerator.between(1.0F, 2.0F)))
+                                                .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))));
+        }
 
-    protected LootTable.Builder createDeepslateDrop(Block pBlock, Item item) {
-        return createSilkTouchDispatchTable(pBlock, (LootPoolEntryContainer.Builder)
-                this.applyExplosionDecay(pBlock,
-                        LootItem.lootTableItem(item)
-                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 3.0F)))
-                                .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))));
-    }
+        protected LootTable.Builder createNetherDrop(Block pBlock, Item item) {
+                return createSilkTouchDispatchTable(pBlock, (LootPoolEntryContainer.Builder) this.applyExplosionDecay(
+                                pBlock,
+                                LootItem.lootTableItem(item)
+                                                .apply(SetItemCountFunction
+                                                                .setCount(UniformGenerator.between(1.0F, 3.0F)))
+                                                .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))));
+        }
 
-    protected LootTable.Builder createNetherDrop(Block pBlock, Item item) {
-        return createSilkTouchDispatchTable(pBlock, (LootPoolEntryContainer.Builder)
-                this.applyExplosionDecay(pBlock,
-                        LootItem.lootTableItem(item)
-                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0F, 5.0F)))
-                                .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))));
-    }
+        protected LootTable.Builder createEndDrop(Block pBlock, Item item) {
+                return createSilkTouchDispatchTable(pBlock, (LootPoolEntryContainer.Builder) this.applyExplosionDecay(
+                                pBlock,
+                                LootItem.lootTableItem(item)
+                                                .apply(SetItemCountFunction
+                                                                .setCount(UniformGenerator.between(3.0F, 5.0F)))
+                                                .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))));
+        }
 
-    protected LootTable.Builder createEndDrop(Block pBlock, Item item) {
-        return createSilkTouchDispatchTable(pBlock, (LootPoolEntryContainer.Builder)
-                this.applyExplosionDecay(pBlock,
-                        LootItem.lootTableItem(item)
-                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(6.0F, 10.0F)))
-                                .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))));
-    }
-
-    @Override
-    protected Iterable<Block> getKnownBlocks() {
-        return ModBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get)::iterator;
-    }
+        @Override
+        protected Iterable<Block> getKnownBlocks() {
+                return ModBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get)::iterator;
+        }
 }

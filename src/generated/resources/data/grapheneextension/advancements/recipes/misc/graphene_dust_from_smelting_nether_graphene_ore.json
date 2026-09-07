@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_graphene_dust": {
+    "has_nether_graphene_ore": {
       "conditions": {
         "items": [
           {
             "items": [
-              "grapheneextension:graphene_dust"
+              "grapheneextension:nether_graphene_ore"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "grapheneextension:graphene_from_blasting_graphene_dust"
+        "recipe": "grapheneextension:graphene_dust_from_smelting_nether_graphene_ore"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_graphene_dust",
+      "has_nether_graphene_ore",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "grapheneextension:graphene_from_blasting_graphene_dust"
+      "grapheneextension:graphene_dust_from_smelting_nether_graphene_ore"
     ]
   },
   "sends_telemetry_event": false

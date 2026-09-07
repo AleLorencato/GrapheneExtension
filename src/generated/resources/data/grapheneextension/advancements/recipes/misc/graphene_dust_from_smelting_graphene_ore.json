@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_deepslate_graphene_ore": {
+    "has_graphene_ore": {
       "conditions": {
         "items": [
           {
             "items": [
-              "grapheneextension:deepslate_graphene_ore"
+              "grapheneextension:graphene_ore"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "grapheneextension:graphene_from_blasting_deepslate_graphene_ore"
+        "recipe": "grapheneextension:graphene_dust_from_smelting_graphene_ore"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_deepslate_graphene_ore",
+      "has_graphene_ore",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "grapheneextension:graphene_from_blasting_deepslate_graphene_ore"
+      "grapheneextension:graphene_dust_from_smelting_graphene_ore"
     ]
   },
   "sends_telemetry_event": false

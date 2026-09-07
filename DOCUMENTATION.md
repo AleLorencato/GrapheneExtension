@@ -55,12 +55,12 @@
 
 ## 3. Roadmap de Desenvolvimento
 
-### 📌 Tarefa 1: Imediata — Balanceamento de Dificuldade
-- [ ] Alterar receitas de fundição (Fornalha e Alto-Forno):
+### 📌 Tarefa 1: Imediata — Balanceamento de Dificuldade (Concluída ✅)
+- [x] Alterar receitas de fundição (Fornalha e Alto-Forno):
   - Blocos de minério assados resultam em **Pó de Grafeno** (`graphene_dust`), ao invés de Grafeno direto.
   - Remover a fundição 1:1 de Pó de Grafeno para Grafeno.
-- [ ] Adicionar receita na bancada de trabalho: **8 Pós de Grafeno $\rightarrow$ 1 Grafeno** (`graphene`).
-- [ ] Executar `./gradlew runData` para atualizar os arquivos gerados.
+- [x] Adicionar receita na bancada de trabalho: **8 Pós de Grafeno $\rightarrow$ 1 Grafeno** (`graphene`).
+- [x] Executar `./gradlew runData` para atualizar os arquivos gerados.
 
 ### 📌 Tarefa 2: Futura (Versão 1.0 Oficial)
 - [ ] Adicionar o item Minério de Grafeno Bruto (`raw_graphene`).

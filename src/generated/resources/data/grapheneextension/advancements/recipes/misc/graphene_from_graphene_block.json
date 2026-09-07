@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "grapheneextension:graphene"
+        "recipe": "grapheneextension:graphene_from_graphene_block"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "grapheneextension:graphene"
+      "grapheneextension:graphene_from_graphene_block"
     ]
   },
   "sends_telemetry_event": false

@@ -136,17 +136,17 @@ graph TD
 
 ## Detalhamento das Fases do Roadmap
 
-### Fase 1: Tarefa Imediata (Balanceamento da Dificuldade)
+### Fase 1: Tarefa Imediata (Balanceamento da Dificuldade) — CONCLUÍDA ✅
 > **Objetivo:** Como o minério gera em todas as dimensões com veios abundantes, o grafeno atual é muito fácil de conseguir. Dar utilidade real ao Pó de Grafeno (`graphene_dust`) e frear a progressão.
 
-1. **Alteração na Fornalha e Alto-Forno (`ModRecipeProvider.java`):**
+1. **Alteração na Fornalha e Alto-Forno (`ModRecipeProvider.java`):** [x]
    - Assar os blocos de minério de grafeno (`graphene_ore`, `deepslate_graphene_ore`, `nether_graphene_ore`, `end_stone_graphene_ore`) agora resulta em **Pó de Grafeno** (`graphene_dust`), e NÃO mais em Grafeno pronto.
    - O pó de grafeno não é mais assado diretamente para dar 1 Grafeno (remoção da receita 1:1).
-2. **Nova Receita de Compactação na Bancada de Trabalho:**
-   - Juntar **8 Pós de Grafeno** para produzir **1 Grafeno** (`ModItems.GRAPHENE`).
-3. **Execução do Datagen e Validação:**
+2. **Nova Receita de Compactação na Bancada de Trabalho:** [x]
+   - Juntar **8 Pós de Grafeno** em moldura 3x3 para produzir **1 Grafeno** (`ModItems.GRAPHENE`).
+3. **Execução do Datagen e Validação:** [x]
    - Rodar `./gradlew runData` para atualizar os arquivos JSON em `src/generated/resources`.
-   - Testar no jogo / compilação.
+   - Testar no jogo / compilação (`BUILD SUCCESSFUL`).
 
 ---
 
