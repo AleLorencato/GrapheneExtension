@@ -13,6 +13,7 @@ import java.util.List;
 
 public class ModToolTiers {
     public static final Tier GRAPHENE = TierSortingRegistry.registerTier(
-            new ForgeTier(5, 2500, 12f, 5f, 25, ModTags.Blocks.NEEDS_GRAPHENE_TOOL, () -> Ingredient.of(ModItems.GRAPHENE.get())),
+            new ForgeTier(5, 2500, 12f, 3f, 25, ModTags.Blocks.NEEDS_GRAPHENE_TOOL,
+                    () -> Ingredient.of(ModItems.GRAPHENE.get())),
             new ResourceLocation(GrapheneExtension.MOD_ID, "graphene"), List.of(Tiers.NETHERITE), List.of());
 }

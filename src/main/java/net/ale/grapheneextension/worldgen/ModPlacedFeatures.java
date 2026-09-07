@@ -18,20 +18,26 @@ import java.util.List;
 public class ModPlacedFeatures {
 
     public static final ResourceKey<PlacedFeature> GRAPHENE_ORE_PLACED_KEY = registerKey("graphene_ore_placed");
-    public static final ResourceKey<PlacedFeature> NETHER_GRAPHENE_ORE_PLACED_KEY = registerKey("nether_graphene_ore_placed");
-    public static final ResourceKey<PlacedFeature> END_STONE_GRAPHENE_ORE_PLACED_KEY = registerKey("end_stone_graphene_ore_placed");
+    public static final ResourceKey<PlacedFeature> NETHER_GRAPHENE_ORE_PLACED_KEY = registerKey(
+            "nether_graphene_ore_placed");
+    public static final ResourceKey<PlacedFeature> END_STONE_GRAPHENE_ORE_PLACED_KEY = registerKey(
+            "end_stone_graphene_ore_placed");
 
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
-        register(context, GRAPHENE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_GRAPHENE_ORE_KEY),
+        register(context, GRAPHENE_ORE_PLACED_KEY,
+                configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_GRAPHENE_ORE_KEY),
                 ModOrePlacement.commonOrePlacement(12,
-                        HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80))));
+                        HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80),
+                                VerticalAnchor.aboveBottom(80))));
 
-        register(context, NETHER_GRAPHENE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_GRAPHENE_ORE_KEY),
+        register(context, NETHER_GRAPHENE_ORE_PLACED_KEY,
+                configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_GRAPHENE_ORE_KEY),
                 ModOrePlacement.commonOrePlacement(12,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(5), VerticalAnchor.absolute(120))));
 
-        register(context, END_STONE_GRAPHENE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.END_STONE_GRAPHENE_ORE_KEY),
+        register(context, END_STONE_GRAPHENE_ORE_PLACED_KEY,
+                configuredFeatures.getOrThrow(ModConfiguredFeatures.END_STONE_GRAPHENE_ORE_KEY),
                 ModOrePlacement.commonOrePlacement(12,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(100))));
     }
@@ -40,8 +46,9 @@ public class ModPlacedFeatures {
         return ResourceKey.create(Registries.PLACED_FEATURE, new ResourceLocation(GrapheneExtension.MOD_ID, name));
     }
 
-    private static void register(BootstapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key, Holder<ConfiguredFeature<?, ?>> configuration,
-                                 List<PlacementModifier> modifiers) {
+    private static void register(BootstapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key,
+            Holder<ConfiguredFeature<?, ?>> configuration,
+            List<PlacementModifier> modifiers) {
         context.register(key, new PlacedFeature(configuration, List.copyOf(modifiers)));
     }
 }
