@@ -30,8 +30,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 this.add(ModBlocks.GRAPHENE_ORE.get(),
                                 block -> createOreDrop(ModBlocks.GRAPHENE_ORE.get(), ModItems.RAW_GRAPHENE.get()));
                 this.add(ModBlocks.DEEPSLATE_GRAPHENE_ORE.get(),
-                                block -> createDeepslateDrop(ModBlocks.DEEPSLATE_GRAPHENE_ORE.get(),
-                                                ModItems.RAW_GRAPHENE.get()));
+                                block -> createOreDrop(ModBlocks.DEEPSLATE_GRAPHENE_ORE.get(), ModItems.RAW_GRAPHENE.get()));
                 this.add(ModBlocks.NETHER_GRAPHENE_ORE.get(),
                                 block -> createNetherDrop(ModBlocks.NETHER_GRAPHENE_ORE.get(),
                                                 ModItems.RAW_GRAPHENE.get()));
@@ -39,15 +38,6 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 this.add(ModBlocks.END_STONE_GRAPHENE_ORE.get(),
                                 block -> createEndDrop(ModBlocks.END_STONE_GRAPHENE_ORE.get(),
                                                 ModItems.RAW_GRAPHENE.get()));
-        }
-
-        protected LootTable.Builder createDeepslateDrop(Block pBlock, Item item) {
-                return createSilkTouchDispatchTable(pBlock, (LootPoolEntryContainer.Builder) this.applyExplosionDecay(
-                                pBlock,
-                                LootItem.lootTableItem(item)
-                                                .apply(SetItemCountFunction
-                                                                .setCount(UniformGenerator.between(1.0F, 2.0F)))
-                                                .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))));
         }
 
         protected LootTable.Builder createNetherDrop(Block pBlock, Item item) {

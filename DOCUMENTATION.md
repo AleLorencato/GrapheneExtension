@@ -42,8 +42,8 @@
 
 ### 2.4. Blocos e Minérios
 - `graphene_block`: Bloco decorativo/compactação (9 Grafenos).
-- `graphene_ore` (Overworld Pedra): Dropa 1x Pó de Grafeno (+ Fortune), 3-6 XP. Requer ferramenta de Ferro.
-- `deepslate_graphene_ore` (Overworld Ardósia): Dropa 1-3x Pó de Grafeno (+ Fortune), 4-8 XP. Requer ferramenta de Ferro.
+- `graphene_ore` (Overworld Pedra): Dropa 1x Grafeno Bruto (+ Fortune/Silk Touch), 3-6 XP. Requer ferramenta de Ferro.
+- `deepslate_graphene_ore` (Overworld Ardósia): Dropa 1x Grafeno Bruto (+ Fortune/Silk Touch), 4-8 XP. Requer ferramenta de Ferro.
 - `nether_graphene_ore` (Nether): Dropa 2-5x Pó de Grafeno (+ Fortune), 3-7 XP. Requer ferramenta de Ferro.
 - `end_stone_graphene_ore` (The End): Dropa 6-10x Pó de Grafeno (+ Fortune), 5-10 XP. Requer ferramenta de Netherite.
 
