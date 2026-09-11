@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_graphene": {
+      "conditions": {
+        "items": [
+          {
+            "items": "grapheneextension:graphene"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "grapheneextension:graphene_helmet"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_graphene"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "grapheneextension:graphene_helmet"
+    ]
+  }
+}

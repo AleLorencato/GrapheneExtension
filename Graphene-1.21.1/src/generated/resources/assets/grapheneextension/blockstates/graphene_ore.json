@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "grapheneextension:block/graphene_ore"
+    }
+  }
+}

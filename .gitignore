@@ -1,29 +1,25 @@
-# eclipse
-bin
-*.launch
-.settings
-.metadata
-.classpath
-.project
+# Gradle & Build artifacts
+**/build/
+**/.gradle/
+**/bin/
+**/out/
 
-# idea
-out
-*.ipr
-*.iws
-*.iml
-.idea
+# IDE files
+**/.idea/
+**/*.iml
+**/*.ipr
+**/*.iws
+**/.vscode/
+**/.settings/
+**/.project/
+**/.classpath
+**/.factorypath
 
-# gradle
-build
-.gradle
+# Minecraft run directories and cache
+**/run/
+**/run-data/
+**/src/generated/resources/.cache/
 
-# run directories
-run/
-run-data/
-src/generated/resources/.cache
-
-# other
-eclipse
-
-# Files from Forge MDK
-forge*changelog.txt
+# OS files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,16 @@
+.gradle
+build/
+bin/
+run/
+run-data/
+.idea
+*.iml
+*.ipr
+*.iws
+out/
+.vscode
+.settings
+.project
+.classpath
+.factorypath
+.SystemSearchHistory*

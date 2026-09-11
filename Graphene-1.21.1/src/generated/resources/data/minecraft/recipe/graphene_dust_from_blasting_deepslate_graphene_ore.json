@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.5,
+  "group": "graphene_dust",
+  "ingredient": {
+    "item": "grapheneextension:deepslate_graphene_ore"
+  },
+  "result": {
+    "count": 1,
+    "id": "grapheneextension:graphene_dust"
+  }
+}

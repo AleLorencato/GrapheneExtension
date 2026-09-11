@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.4,
+  "group": "graphene_dust",
+  "ingredient": {
+    "item": "grapheneextension:graphene_ore"
+  },
+  "result": {
+    "count": 1,
+    "id": "grapheneextension:graphene_dust"
+  }
+}
