@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_raw_graphene": {
+      "conditions": {
+        "items": [
+          {
+            "items": "grapheneextension:raw_graphene"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:graphene_dust_from_blasting_raw_graphene"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_raw_graphene"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:graphene_dust_from_blasting_raw_graphene"
+    ]
+  }
+}

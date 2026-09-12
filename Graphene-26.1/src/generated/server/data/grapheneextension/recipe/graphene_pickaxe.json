@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "S": "grapheneextension:graphene",
+    "X": "minecraft:stick"
+  },
+  "pattern": [
+    "SSS",
+    " X ",
+    " X "
+  ],
+  "result": {
+    "id": "grapheneextension:graphene_pickaxe"
+  }
+}

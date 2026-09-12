@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#minecraft:is_nether",
+  "features": "grapheneextension:nether_graphene_ore_placed",
+  "step": "underground_ores"
+}

@@ -1,0 +1,19 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "grapheneextension:graphene"
+      }
+    ],
+    "humanoid_baby": [
+      {
+        "texture": "grapheneextension:graphene"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "grapheneextension:graphene"
+      }
+    ]
+  }
+}

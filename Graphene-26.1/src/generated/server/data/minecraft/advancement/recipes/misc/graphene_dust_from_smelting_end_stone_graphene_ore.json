@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_end_stone_graphene_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "grapheneextension:end_stone_graphene_ore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:graphene_dust_from_smelting_end_stone_graphene_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_end_stone_graphene_ore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:graphene_dust_from_smelting_end_stone_graphene_ore"
+    ]
+  }
+}

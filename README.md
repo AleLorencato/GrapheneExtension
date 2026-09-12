@@ -6,10 +6,11 @@ Mod para Minecraft que adiciona minérios, lingotes, pós, armaduras e ferrament
 
 ## 📁 Versões Disponíveis no Repositório
 
-| Diretório | Versão do Minecraft | Modloader | Status |
-| :--- | :--- | :--- | :--- |
-| [Graphene-1.20.1](./Graphene-1.20.1/) | Minecraft `1.20.1` | Minecraft Forge (`47.2.30`) | Estável ✅ |
-| [Graphene-1.21.1](./Graphene-1.21.1/) | Minecraft `1.21.1` | NeoForge (`21.1.250`) | Estável ✅ |
+| Diretório | Versão do Minecraft | Modloader | Java | Status |
+| :--- | :--- | :--- | :--- | :--- |
+| [Graphene-1.20.1](./Graphene-1.20.1/) | Minecraft `1.20.1` | Minecraft Forge (`47.2.30`) | Java 17 | Estável ✅ |
+| [Graphene-1.21.1](./Graphene-1.21.1/) | Minecraft `1.21.1` | NeoForge (`21.1.250`) | Java 21 | Estável ✅ |
+| [Graphene-26.1](./Graphene-26.1/) | Minecraft `26.1.2` | NeoForge (`26.1.0-beta`) | Java 25 | Estável ✅ |
 
 ---
 
